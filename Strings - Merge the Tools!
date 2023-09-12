@@ -1,0 +1,17 @@
+def merge_the_tools(S, k):
+    n=len(S)
+    lst=[]
+
+
+    for i in range(n+1):
+        if i!=0 and i%k ==0:
+            lst.append(S[i-k:i])
+        else:
+            continue
+#print(lst)
+    for i in lst:
+        print(''.join(dict.fromkeys(list(i)).keys()))
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
